@@ -43,8 +43,12 @@ public class LiquidacionEmpresa {
             double salario;
             NivelAcademico nivelAcademico; 
 
-            nombreEmpleado = Lectura.leerStringM("nombre del empleado:");
-            
+            do{
+                nombreEmpleado = Lectura.leerStringM("nombre del empleado:");
+                if(!nombreEmpleado.equals("")) break;
+                System.out.println("ERROR: nombre del empleado vacio");
+            }while(true);
+
             do{
                 legajo = Lectura.leerIntM("ingrese el legajo:");
                 if(!buscarLegajoEmpleado(legajo, empresa)) break;
