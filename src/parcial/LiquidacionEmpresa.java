@@ -119,7 +119,6 @@ public class LiquidacionEmpresa {
     }
 
     public static Empleado empleadoConMejorSalario(Empresa empresa) {
-        int cantidad= 0;
         Empleado empleadoMayorSalario = empresa.getEmpleados().get(0);
         for (Empleado empleado : empresa.getEmpleados()) {
             
